@@ -1,17 +1,5 @@
 const data = require('./input.js')
-
-const countCalories = raw => {
-  const input = raw.split('\n').reduce((acc, val) => {
-    if(val !== '') {
-      const newInt = parseInt(val, 10)
-      const newArr = [...acc]
-      newArr[newArr.length-1] += newInt
-      return newArr
-    }
-    return [...acc, 0]
-  }, [0]);
-  return input;
-}
+const { countCalories } = require('./a.js')
 
 const getTop = raw => {
   const sum = countCalories(raw)
